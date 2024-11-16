@@ -63,7 +63,6 @@ solution = solve_ivp(model, t_span, y0, t_eval=t_eval, args=(rho_s, k, m, alpha,
 # Extract results
 t = solution.t
 s, r = solution.y
-
 # Plot with Plotly
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=t, y=s, mode='lines', name='S', line=dict(color='blue')))
@@ -85,7 +84,7 @@ default_init_cond = [
     [17*10**5, 2*10**4]
 ]
 init_cond = st.multiselect("Initial conditions for phase plane analysis", default_init_cond, default=[default_init_cond[0]])
-
+st.write("The following plots show the evolution of the sensitive and resistant cells populations over time, as well as the phase plane analysis of the system. The phase plane analysis shows the trajectories of the system for different initial conditions. The study of the system has shown that it has three equilibrium points: (0, k/m), (k, 0), and (0, 0). The phase plane analysis intend to unserstand the behavior of the system around these equilibrium points.")
 # Phase plane plot
 def format_number(num):
     if num >= 1000:
