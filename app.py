@@ -12,7 +12,7 @@ def model(t, y, rho, K, m, alpha, C, beta):
 
 
 # App title
-st.title("Numerical Simulation of an ODE System")
+st.title("Numerical Simulation of an ODE System:")
 
 st.write("This app simulates the dynamics of a system of ordinary differential equations (ODEs) that models the population of sensitive and resistant cells in the presence of a drug.")
 st.write("The system is given by:")
